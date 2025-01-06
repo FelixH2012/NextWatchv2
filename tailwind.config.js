@@ -8,6 +8,9 @@ export default {
         fontFamily: {
             sans: ["Poppins", "sans-serif"],
         },
+        animation: {
+            'spin-slow': 'spin 3s linear infinite',
+        },
         colors: {
             'gray-950': '#1a1a1a',
             'gray-900': '#212121',

@@ -1,7 +1,8 @@
-import { Search } from 'lucide-react';
+import {ScissorsLineDashedIcon, Search} from 'lucide-react';
 import { useState } from 'react';
+import Filters from "./Filters.jsx";
 
-function Header() {
+function Header({onFilterChange}) {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
@@ -35,9 +36,19 @@ function Header() {
                                 transition-all duration-300
                                 ${isFocused ? 'opacity-100 scale-105' : ''}`}
                         />
+
                     </div>
 
                     <div className="flex items-center gap-4">
+
+
+                        <Filters onFilterChange={onFilterChange}/>
+
+                        <div className="flex flex-1">
+                            <div
+                                className="h-full min-h-[2em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div>
+                        </div>
+
                         <button className="px-4 py-2 rounded-lg
                             text-gray-300 hover:text-white
                             bg-gray-800/50 hover:bg-gray-800/80
